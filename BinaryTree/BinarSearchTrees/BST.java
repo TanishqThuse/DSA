@@ -160,8 +160,11 @@ public class BST {
         return root;
     }
 
-    public static Node inorderSuccessor(){
-
+    public static Node inorderSuccessor(Node root){
+        while(root.left != null) {
+            root = root.left;
+        }
+        return root;
     }
     
     //Incorrect function not working 
@@ -215,7 +218,8 @@ public class BST {
 
         int c = 3;
         System.out.println(c+" is Present in BST? : " + isPresent(root, c));
-    
+
+        //Practise deletion of Node by yourself for clearance
         System.out.println("Before deleting 7 : " );
         Inorder(root);
         System.out.println();
