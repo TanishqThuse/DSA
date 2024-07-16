@@ -58,19 +58,25 @@ class code{
         }
         
         for(int i=1; i<=key.length(); i++){
-            String firstPart = key.substrinng(0,i);
+            String firstPart = key.substring(0,i);
             String secondPart = key.substring(i);
-            if(search(firstPart) && wordBreak()){
+            if(search(firstPart) && wordBreak(secondPart)){
                 return true;
             }
         }
+        return false;
     }
 
-
-    public static void main(){
+    public static void main(String args[]){
         
         String words[] = {"hello", "world", "java", "code", "programming", "language"};
         String key = "helloworld";
+
+        for(int i=0; i<words.length; i++){
+            insert(words[i]);
+        }
+
+        System.out.println(wordBreak(key));
 
     }
 }

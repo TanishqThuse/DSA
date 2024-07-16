@@ -1,5 +1,4 @@
 import java.util.io;
-import java.util.HashSet;
 
 //twoSum pair check using binary search
 /*Time complexity : O(N logN) */
